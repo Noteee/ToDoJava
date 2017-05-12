@@ -3,25 +3,20 @@
  */
 public class ToDo
 {
-    private int id;
+    private int toDoId;
     private String name;
     private boolean state;
 
     public ToDo(int id, String name, boolean state)
     {
-        this.id = id;
+        toDoId = id;
         this.name = name;
         this.state = state;
     }
 
     public int getId()
     {
-        return id;
-    }
-
-    public void setId(int id)
-    {
-        this.id = id;
+        return toDoId;
     }
 
     public String getName()
@@ -29,18 +24,19 @@ public class ToDo
         return name;
     }
 
-    public void setName(String name)
-    {
-        this.name = name;
-    }
-
     public boolean isState()
     {
         return state;
     }
 
-    public void setState(boolean state)
+    public void toggleState()
     {
-        this.state = state;
+        state = !state;
+    }
+
+    @Override
+    public String toString()
+    {
+        return getName();
     }
 }

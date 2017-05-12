@@ -30,6 +30,12 @@ public class HiServlet extends HttpServlet {
             //String msg = MessageDAO.getMsg(lang);
             //req.setAttribute("msg", String.format(msg, name));
 
-            req.getRequestDispatcher("name.jsp").forward(req, resp);
+            req.getRequestDispatcher("tester.jsp").forward(req, resp);
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
+    {
+
     }
 }
